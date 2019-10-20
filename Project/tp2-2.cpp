@@ -1,12 +1,9 @@
 //Daniel Pascual
 //Cyclic Redundancy Check
 
-
-
 #include <iostream>	// pour le cout et le cin
 #include <conio.h>	// pour le _getch() et _getche()
 #include <string>
-#include <sstream>//Convert string to int
 
 using namespace std;
 
@@ -340,13 +337,12 @@ void compareMSG(const bool trame2[]) {
 
 }
 
-
 void main() {
 	string msg;
 	unsigned int crc, crc2, gen;
 	bool trame[SIZE]{ 0 }, trame2[SIZE]{ 0 };
-
-
+	
+	
 	cout << "Entrer les 4 chars: ";
 	cin >> msg;
 	msg = limitStringSize(msg, 4);

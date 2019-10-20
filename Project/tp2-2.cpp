@@ -205,64 +205,6 @@ string ConvertIntToString(const int &a) {
 //}
 
 
-/*int CRC_Calcul(unsigned int *msg, unsigned int gen, unsigned int reste) {
-
-	unsigned int crc = 0;
-	unsigned int add = 1, sub = 0x80, counter;
-	bool stop;
-
-	for (int i = 0; i < SIZE; i++) {
-
-		if (crc < gen) {
-			crc <<= 1;
-			if (msg[i] == 1)
-				crc |= add;
-
-		}
-		else {
-
-			while (crc >= gen) {
-
-				sub = 1;//0x80
-
-				for (int a = 0; a < 8; a++) {
-					if (gen&sub) {
-						if (crc&sub)//soustraction normale
-							crc = crc ^ sub;
-						else//le crc cherche un binaire plus haut a donner 
-						{
-
-							counter = 1;
-							bool stop = false;
-							while (stop == false) {
-
-								sub <<= 1;
-								counter++;
-
-								if (crc&sub) {
-
-									while (counter > 0) {
-										crc = crc ^ sub;
-										sub >>= 1;
-										counter--;
-									}
-									stop = true;
-
-								}
-
-							}
-						}
-
-					}
-					sub <<= 1;
-				}
-			}
-		}
-	}
-	return crc;
-}
-*/
-
 
 //int CRC_Calcul(unsigned int *msg, unsigned int gen, unsigned int reste) {
 //
